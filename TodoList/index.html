@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+</head>
+
+<body>
+    <div>
+        <input id="texto" />
+        <button id="creaTarea">+</button>
+    </div>
+    <div>
+        <ul id="listaDeTareas">
+        </ul>
+    </div>
+    <script src="jquery-3.1.1.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script src="vista.js"></script>
+    <script src="todoItem.js"></script>
+    <script src="datos.js"></script>
+    <script src="negocio.js"></script>
+    <script>
+        let datos = new Datos();
+        let negocio = new Negocio(datos);
+        let vista = new Vista(negocio);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+body {
+    background: #E7E7E8;
+    font-family: "Verdana";
+}
+
+#panel-izq {
+    box-sizing: content-box;
+    float: left;
+    width: 30%;
+}
+
+#panel-der {
+    box-sizing: content-box;
+    float: left;
+    width: 70%;
+}
+
+#panel-inf {
+    clear: both;
+}
+
+#main {
+    margin: 1%;
+    background-image: url("background.jpg");
+    border-radius: 18px 18px 18px 18px;
+    -moz-border-radius: 18px 18px 18px 18px;
+    -webkit-border-radius: 18px 18px 18px 18px;
+    border: 1px solid #000000;
+    padding: 10px;
+}
+
+#photo {
+    align-content: center;
+    width: 90%;
+    align-self: auto;
+    border-radius: 129px 129px 129px 129px;
+    -moz-border-radius: 129px 129px 129px 129px;
+    -webkit-border-radius: 129px 129px 129px 129px;
+    border: 0px solid #000000;
+}
+
+ol {
+    list-style-type: none;
+    color: black;
+    padding: 0;
+}
+
+li.contact {
+    margin: 5px;
+    font-size: 25;
+    text-align: center;
+    margin: 5px;
+    padding: 5px;
+}
+
+#proj_list li {
+    display: inline;
+}
+
+.proyect_image img {
+    width: 150px;
+    height: 150px;
+}
+
+h3 {
+    font-size: 20;
+}
+
+ul#proj_list {
+    padding: 0;
+    text-align: center;
+}

@@ -9,6 +9,7 @@ var Restaurant = function(id, nombre, rubro, ubicacion, horarios, imagen, califi
 }
 
 Restaurant.prototype.reservarHorario = function(horarioReservado) {
+    console.log("Horario Reservado: ", horarioReservado);
     for (var i = 0; i < this.horarios.length; i++) {
         if (this.horarios[i] === horarioReservado) {
             this.horarios.splice(i, 1);
@@ -36,4 +37,3 @@ Restaurant.prototype.obtenerPuntuacion = function() {
     }
 
 }
-

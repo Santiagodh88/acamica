@@ -26,20 +26,23 @@ Listado.prototype.buscarRestaurante = function(id) {
     return "No se ha encontrado ningún restaurant";
 }
 
+function eliminarRepetidos(array) {
+    return array.filter(function(elem, index, self) {
+        return index === self.indexOf(elem);
+    }).sort();
+
+}
+
 //Obtiene todas las ciudades de los restaurantes sin repetidos
 Listado.prototype.obtenerUbicaciones = function() {
     //Array donde se van a ir agregando las ciudades (van a estar repetidas)
-    var ciudades = [];
+    let ciudades = [];
     //Se recorre el array de restaurantes y se va agregando al array creado, todas las ubicaciones o ciudades encontradas
     for (var i = 0; i < this.restaurantes.length; i++) {
         ciudades.push(this.restaurantes[i].ubicacion);
     }
     //Se crea un nuevo array donde se van a agregar las ciudades pero sin repetirse
-    var aux_ciudades = ciudades.filter(function(elem, index, self) {
-        return index === self.indexOf(elem);
-    });
-
-    return aux_ciudades.sort();
+    return eliminarRepetidos(ciudades);
 }
 
 //Obtiene todos los rubros de los restaurantes sin repetidos. Su funcionamiento es similar a obtC()
@@ -49,11 +52,12 @@ Listado.prototype.obtenerRubros = function() {
         rubros.push(this.restaurantes[i].rubro);
     }
 
-    var aux_rubros = rubros.filter(function(elem, index, self) {
-        return index === self.indexOf(elem);
-    });
+    /*    var aux_rubros = rubros.filter(function(elem, index, self) {
+            return index === self.indexOf(elem);
+        });
 
-    return aux_rubros.sort();
+        return aux_rubros.sort();*/
+    return eliminarRepetidos(rubros);
 }
 
 //Obtiene todos los horarios de los restaurantes (sin repetidos). Está funcionalidad es un poco más compleja ya que un restaurante
@@ -76,11 +80,12 @@ Listado.prototype.obtenerHorarios = function() {
     });
 
     //En este arreglo vamos a poner todos los horarios pero sin repetidos
-    var horariosSinRepetir = todosLosHorarios.filter(function(elem, index, self) {
+    /*var horariosSinRepetir = todosLosHorarios.filter(function(elem, index, self) {
         return index === self.indexOf(elem);
     });
 
-    return horariosSinRepetir.sort();
+    return horariosSinRepetir.sort();*/
+    return eliminarRepetidos(todosLosHorarios);
 }
 
 //Función que recibe los filtros que llegan desde el HTML y filtra el arreglo de restaurantes.

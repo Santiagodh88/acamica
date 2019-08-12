@@ -108,3 +108,18 @@ describe('Dado un listado de Restaurantes', function() {
     })
 
 })
+
+//Test Reserva
+describe('Test precioBase del objeto reserva', function() {
+    it('Calcula correctamente el precio base', function() {
+        expect(listadoDeReservas[0].precioBase()).to.equal(2800);
+        expect(listadoDeReservas[1].precioBase()).to.equal(300);
+    });
+});
+
+describe('Test precioFinal del objeto reserva', function() {
+    it('Calcula correctamente el precio final', function() {
+        expect(listadoDeReservas[0].precioFinal()).to.equal(2310);
+        expect(listadoDeReservas[1].precioFinal()).to.equal(100);
+    });
+});

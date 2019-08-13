@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TaTeTi</title>
+
+</head>
+<div>
+    <title>
+        Ta Te Ti
+    </title>
+</div>
+<div class="game-board">
+    <div class="box" id="item0">Item 0</div>
+    <div class="box" id="item1">Item 1</div>
+    <div class="box" id="item2">Item 2</div>
+    <div class="box" id="item3">Item 3</div>
+    <div class="box" id="item4">Item 4</div>
+    <div class="box" id="item5">Item 5</div>
+    <div class="box" id="item6">Item 6</div>
+    <div class="box" id="item7">Item 7</div>
+    <div class="box" id="item8">Item 8</div>
+</div>
+
+<body>
+    <script src="jquery-3.1.1.js"></script>
+    <script src="jquery-ui.js"></script>
+    <script src="juego.js"></script>
+    <script src="vista.js"></script>
+    <script src="computadora.js"></script>
+    <script>
+        let juego = new Juego();
+        let vista = new Vista(juego);
+    </script>
+</body>
+
+</html>

@@ -72,7 +72,7 @@ Reserva.prototype.descuentosCodigo = function(base) {
     return descuento;
 }
 
-let listadoDeReservas = [
-    new Reserva(new Date(2019, 7, 24, 11, 00), 8, 350, "DES1"),
-    new Reserva(new Date(2019, 7, 27, 14, 00), 2, 150, "DES200"),
+let FlistadoDeReservas = [
+    new Reserva(new Date(2018, 7, 24, 11, 00), 8, 350, "DES1"),
+    new Reserva(new Date(2018, 7, 27, 14, 00), 2, 150, "DES200"),
 ];

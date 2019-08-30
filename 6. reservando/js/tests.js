@@ -112,14 +112,22 @@ describe('Dado un listado de Restaurantes', function() {
 //Test Reserva
 describe('Test precioBase del objeto reserva', function() {
     it('Calcula correctamente el precio base', function() {
-        expect(listadoDeReservas[0].precioBase()).to.equal(2800);
-        expect(listadoDeReservas[1].precioBase()).to.equal(300);
+        let reserva = new Reserva(new Date(2018, 7, 24, 11, 00), 8, 350, "DES1");
+        expect(reserva.precioBase()).to.be.equal(2800);
     });
 });
 
 describe('Test precioFinal del objeto reserva', function() {
     it('Calcula correctamente el precio final', function() {
-        expect(listadoDeReservas[0].precioFinal()).to.equal(2310);
-        expect(listadoDeReservas[1].precioFinal()).to.equal(100);
+        let reserva = new Reserva(new Date(2018, 7, 27, 14, 100), 2, 150, "DES200");
+        expect(reserva.precioFinal()).to.be.equal(100);
     });
 });
+
+//buscarRestaurante()
+describe('Test para buscar un restaurante', function() {
+    it('Debe corresponder el id con el nombre del restaurante', function() {
+        const idDelRestaurante = listado.restaurantes[4].id;
+        expect(idDelRestaurante).to.equal(5);
+    })
+})

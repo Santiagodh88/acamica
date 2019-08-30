@@ -23,7 +23,7 @@ Listado.prototype.buscarRestaurante = function(id) {
             return this.restaurantes[i]
         }
     }*/
-    let restaurantSeleccionado = this.restaurantes.filter(restaurant => restaurant.id == id);
+    let restaurantSeleccionado = this.restaurantes.find(restaurant => restaurant.id == id);
 
     if (restaurantSeleccionado.length > 0) {
         return restaurantSeleccionado[0];
